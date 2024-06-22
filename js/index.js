@@ -1945,7 +1945,11 @@ window.addEventListener("load", function () {
 
     if (
       currentTime < lyrics[0].words[0].startTime / 1000 ||
-      currentTime > lyrics[lyrics.length - 1].words[5].endTime / 1000
+      currentTime >
+        lyrics[lyrics.length - 1].words[
+          lyrics[lyrics.length - 1].words.length - 1
+        ].endTime /
+          1000
     ) {
       currentLyric = "Tên bài hát: Bones";
       nextLyric = "Nghệ sĩ/Nhóm nghệ sĩ: Imagine Dragons";
